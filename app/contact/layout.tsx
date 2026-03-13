@@ -1,5 +1,3 @@
-import { Children, ReactNode } from 'react'
-
 export default function test({ children }: { children: React.ReactNode }) {
   return (
     <main className="border-3 border-purple-700 p-4">
