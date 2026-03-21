@@ -1,16 +1,26 @@
-import { ArrowUpIcon } from "lucide-react"
-
-import { Button } from "@/components/ui/button"
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className="flex min-h-[calc(100vh-4rem)] items-center justify-center">
-      <div className="flex flex-wrap items-center gap-2 md:flex-row">
-        <Button variant="outline">Button</Button>
-        <Button variant="outline" size="icon" aria-label="Submit">
-          <ArrowUpIcon />
+    <div className='mt-4 space-y-4'>
+      <h1 className='scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl'>
+        Welcome to Turnito!
+      </h1>
+      <div className='flex gap-2'>
+        <Button
+          asChild
+          variant='secondary'
+        >
+          <Link href='/login'>Log in</Link>
+        </Button>
+        <Button
+          asChild
+          variant='default'
+        >
+          <Link href='/signup'>Sign up</Link>
         </Button>
       </div>
-    </main>
+    </div>
   )
 }
